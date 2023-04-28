@@ -13,6 +13,7 @@
 		297E481629FB6A78005C5985 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 297E481429FB6A78005C5985 /* Main.storyboard */; };
 		297E481829FB6A7A005C5985 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297E481729FB6A7A005C5985 /* Assets.xcassets */; };
 		297E481B29FB6A7A005C5985 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 297E481929FB6A7A005C5985 /* LaunchScreen.storyboard */; };
+		297E482329FB6D27005C5985 /* EmojiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E482229FB6D27005C5985 /* EmojiCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		297E481729FB6A7A005C5985 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		297E481A29FB6A7A005C5985 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		297E481C29FB6A7A005C5985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		297E482229FB6D27005C5985 /* EmojiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				297E480E29FB6A78005C5985 /* AppDelegate.swift */,
 				297E481029FB6A78005C5985 /* SceneDelegate.swift */,
 				297E481229FB6A78005C5985 /* ViewController.swift */,
+				297E482229FB6D27005C5985 /* EmojiCollectionViewCell.swift */,
 				297E481429FB6A78005C5985 /* Main.storyboard */,
 				297E481729FB6A7A005C5985 /* Assets.xcassets */,
 				297E481929FB6A7A005C5985 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				297E481329FB6A78005C5985 /* ViewController.swift in Sources */,
 				297E480F29FB6A78005C5985 /* AppDelegate.swift in Sources */,
 				297E481129FB6A78005C5985 /* SceneDelegate.swift in Sources */,
+				297E482329FB6D27005C5985 /* EmojiCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
