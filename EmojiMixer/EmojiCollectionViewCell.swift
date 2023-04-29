@@ -1,7 +1,7 @@
 import UIKit
 
 class EmojiCollectionViewCell: UICollectionViewCell {
-    let titleLabel = UILabel()
+    let titleLabel: UILabel = UILabel()
     
     override init(frame: CGRect) {
         super .init(frame: frame)
