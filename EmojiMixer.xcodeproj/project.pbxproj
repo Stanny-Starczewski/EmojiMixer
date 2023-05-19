@@ -13,6 +13,7 @@
 		297E481829FB6A7A005C5985 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297E481729FB6A7A005C5985 /* Assets.xcassets */; };
 		297E481B29FB6A7A005C5985 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 297E481929FB6A7A005C5985 /* LaunchScreen.storyboard */; };
 		297E482329FB6D27005C5985 /* EmojiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E482229FB6D27005C5985 /* EmojiCollectionViewCell.swift */; };
+		29802BC42A172226001F3496 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 29802BC22A172226001F3496 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		297E481A29FB6A7A005C5985 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		297E481C29FB6A7A005C5985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		297E482229FB6D27005C5985 /* EmojiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiCollectionViewCell.swift; sourceTree = "<group>"; };
+		29802BC32A172226001F3496 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				297E481729FB6A7A005C5985 /* Assets.xcassets */,
 				297E481929FB6A7A005C5985 /* LaunchScreen.storyboard */,
 				297E481C29FB6A7A005C5985 /* Info.plist */,
+				29802BC22A172226001F3496 /* Model.xcdatamodeld */,
 			);
 			path = EmojiMixer;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			files = (
 				297E481329FB6A78005C5985 /* ViewController.swift in Sources */,
 				297E480F29FB6A78005C5985 /* AppDelegate.swift in Sources */,
+				29802BC42A172226001F3496 /* Model.xcdatamodeld in Sources */,
 				297E481129FB6A78005C5985 /* SceneDelegate.swift in Sources */,
 				297E482329FB6D27005C5985 /* EmojiCollectionViewCell.swift in Sources */,
 			);
@@ -354,6 +358,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		29802BC22A172226001F3496 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				29802BC32A172226001F3496 /* Model.xcdatamodel */,
+			);
+			currentVersion = 29802BC32A172226001F3496 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 297E480329FB6A78005C5985 /* Project object */;
 }
