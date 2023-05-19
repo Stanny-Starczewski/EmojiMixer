@@ -4,6 +4,7 @@ class ViewController: UIViewController {
     
     var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     lazy var emojiMixFactory = EmojiMixFactory()
+    lazy var emojiMixStore = EmojiMixStore()
     
     private var visibleEmojies = [String]()
 
