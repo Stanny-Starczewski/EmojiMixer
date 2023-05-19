@@ -16,6 +16,8 @@
 		29802BC42A172226001F3496 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 29802BC22A172226001F3496 /* Model.xcdatamodeld */; };
 		2990B78E2A180E7000A443F2 /* EmojiMixFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2990B78D2A180E7000A443F2 /* EmojiMixFactory.swift */; };
 		2990B7902A180F8D00A443F2 /* EmojiMix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2990B78F2A180F8D00A443F2 /* EmojiMix.swift */; };
+		2990B7922A18184C00A443F2 /* EmojiMixStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2990B7912A18184C00A443F2 /* EmojiMixStore.swift */; };
+		2990B7942A181CAF00A443F2 /* UIColorMarshalling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2990B7932A181CAF00A443F2 /* UIColorMarshalling.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		29802BC32A172226001F3496 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		2990B78D2A180E7000A443F2 /* EmojiMixFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMixFactory.swift; sourceTree = "<group>"; };
 		2990B78F2A180F8D00A443F2 /* EmojiMix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMix.swift; sourceTree = "<group>"; };
+		2990B7912A18184C00A443F2 /* EmojiMixStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMixStore.swift; sourceTree = "<group>"; };
+		2990B7932A181CAF00A443F2 /* UIColorMarshalling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorMarshalling.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				297E481029FB6A78005C5985 /* SceneDelegate.swift */,
 				297E481229FB6A78005C5985 /* ViewController.swift */,
 				2990B78D2A180E7000A443F2 /* EmojiMixFactory.swift */,
+				2990B7912A18184C00A443F2 /* EmojiMixStore.swift */,
+				2990B7932A181CAF00A443F2 /* UIColorMarshalling.swift */,
 				2990B78F2A180F8D00A443F2 /* EmojiMix.swift */,
 				297E482229FB6D27005C5985 /* EmojiCollectionViewCell.swift */,
 				297E481729FB6A7A005C5985 /* Assets.xcassets */,
@@ -152,6 +158,8 @@
 				29802BC42A172226001F3496 /* Model.xcdatamodeld in Sources */,
 				297E481129FB6A78005C5985 /* SceneDelegate.swift in Sources */,
 				297E482329FB6D27005C5985 /* EmojiCollectionViewCell.swift in Sources */,
+				2990B7922A18184C00A443F2 /* EmojiMixStore.swift in Sources */,
+				2990B7942A181CAF00A443F2 /* UIColorMarshalling.swift in Sources */,
 				2990B7902A180F8D00A443F2 /* EmojiMix.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
