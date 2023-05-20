@@ -15,6 +15,8 @@ class ViewController: UIViewController {
         configueConstraints()
         collectionView.register(EmojiCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        
+        visibleEmojies = try! emojiMixStore.fetchEmojiMixes()
     }
     
     private func setupNavigationController() {
@@ -29,7 +31,8 @@ class ViewController: UIViewController {
         let newMix = emojiMixFactory.makeNewMix()
 
         let newMixIndex = visibleEmojies.count
-        visibleEmojies.append(newMix)
+        try! emojiMixStore.addNewEmojiMix(newMix)
+        visibleEmojies = try! emojiMixStore.fetchEmojiMixes()
         
         collectionView.performBatchUpdates {
             collectionView.insertItems(at: [IndexPath(item: newMixIndex, section: 0)])

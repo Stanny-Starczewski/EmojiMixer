@@ -66,20 +66,52 @@
 		297E480D29FB6A78005C5985 /* EmojiMixer */ = {
 			isa = PBXGroup;
 			children = (
+				2990B79A2A187BDB00A443F2 /* UI */,
+				2990B79B2A187C1900A443F2 /* Domain */,
+				2990B7992A187BD300A443F2 /* CoreData */,
+				2990B79C2A187C3F00A443F2 /* Helpers */,
 				297E480E29FB6A78005C5985 /* AppDelegate.swift */,
 				297E481029FB6A78005C5985 /* SceneDelegate.swift */,
-				297E481229FB6A78005C5985 /* ViewController.swift */,
-				2990B78D2A180E7000A443F2 /* EmojiMixFactory.swift */,
-				2990B7912A18184C00A443F2 /* EmojiMixStore.swift */,
-				2990B7932A181CAF00A443F2 /* UIColorMarshalling.swift */,
-				2990B78F2A180F8D00A443F2 /* EmojiMix.swift */,
-				297E482229FB6D27005C5985 /* EmojiCollectionViewCell.swift */,
 				297E481729FB6A7A005C5985 /* Assets.xcassets */,
 				297E481929FB6A7A005C5985 /* LaunchScreen.storyboard */,
 				297E481C29FB6A7A005C5985 /* Info.plist */,
-				29802BC22A172226001F3496 /* Model.xcdatamodeld */,
 			);
 			path = EmojiMixer;
+			sourceTree = "<group>";
+		};
+		2990B7992A187BD300A443F2 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				29802BC22A172226001F3496 /* Model.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		2990B79A2A187BDB00A443F2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				297E481229FB6A78005C5985 /* ViewController.swift */,
+				297E482229FB6D27005C5985 /* EmojiCollectionViewCell.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2990B79B2A187C1900A443F2 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				2990B78D2A180E7000A443F2 /* EmojiMixFactory.swift */,
+				2990B7912A18184C00A443F2 /* EmojiMixStore.swift */,
+				2990B78F2A180F8D00A443F2 /* EmojiMix.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		2990B79C2A187C3F00A443F2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2990B7932A181CAF00A443F2 /* UIColorMarshalling.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
