@@ -16,7 +16,8 @@ class ViewController: UIViewController {
         collectionView.register(EmojiCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
         
-        visibleEmojies = try! emojiMixStore.fetchEmojiMixes()
+        emojiMixStore.delegate = self
+        visibleEmojies = emojiMixStore.emojiMixes
     }
     
     private func setupNavigationController() {
@@ -29,26 +30,39 @@ class ViewController: UIViewController {
     @objc
     private func addNewEmojiMix() {
         let newMix = emojiMixFactory.makeNewMix()
-
-        let newMixIndex = visibleEmojies.count
         try! emojiMixStore.addNewEmojiMix(newMix)
-        visibleEmojies = try! emojiMixStore.fetchEmojiMixes()
-        
-        collectionView.performBatchUpdates {
-            collectionView.insertItems(at: [IndexPath(item: newMixIndex, section: 0)])
         }
     }
 
+extension ViewController: EmojiMixStoreDelegate {
+    func store(_ store: EmojiMixStore, didUpdate update: EmojiMixStoreUpdate) {
+        visibleEmojies = emojiMixStore.emojiMixes
+        collectionView.performBatchUpdates {
+            let insertedIndexPaths = update.insertedIndexes.map { IndexPath(item: $0, section: 0) }
+            let deletedIndexPaths = update.deletedIndexes.map { IndexPath(item: $0, section: 0) }
+            let updatedIndexPaths = update.updatedIndexes.map { IndexPath(item: $0, section: 0) }
+            collectionView.insertItems(at: insertedIndexPaths)
+            collectionView.insertItems(at: deletedIndexPaths)
+            collectionView.insertItems(at: updatedIndexPaths)
+            for move in update.movedIndexes {
+                collectionView.moveItem(
+                    at: IndexPath(item: move.oldIndex, section: 0),
+                    to: IndexPath(item: move.newIndex, section: 0)
+                )
+            }
+        }
+    }
+}
+
+extension ViewController {
     func cofigueView() {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-
         view.addSubview(collectionView)
         
         collectionView.dataSource = self
         collectionView.delegate = self
         
         collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-
     }
 
     func configueConstraints() {
@@ -60,7 +74,6 @@ class ViewController: UIViewController {
             
         ])
     }
-
 }
 
 extension ViewController: UICollectionViewDataSource {
@@ -86,7 +99,6 @@ extension ViewController: UICollectionViewDelegate {
 
 
 extension ViewController: UICollectionViewDelegateFlowLayout { // 1 Для управления расположением и размерами элементов (включая размеры хедера) нужно реализовать методы из протокола
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize { // 1 Мы добавляем реализацию метода
         let insets = collectionView.contentInset
         let availableWidth = collectionView.bounds.width - insets.left - insets.right
@@ -99,7 +111,6 @@ extension ViewController: UICollectionViewDelegateFlowLayout { // 1 Для уп�
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 10.0
     }
-    
 }
 
 
