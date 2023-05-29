@@ -3,7 +3,7 @@ import UIKit
 class EmojiCollectionViewCell: UICollectionViewCell {
     let titleLabel: UILabel = UILabel()
     
-    private var viewModel: EmojiMixViewModel?
+     var viewModel: EmojiMixViewModel?
     
     private var emojiesBinding: NSObject?
     private var backgroundColorBinding: NSObject?
@@ -35,7 +35,7 @@ class EmojiCollectionViewCell: UICollectionViewCell {
     
     func initialize(_ viewModel: EmojiMixViewModel) {
         self.viewModel = viewModel
-        setTitleLabel(text: viewModel.emojies)
+        setTitleLabel(text: viewModel.emojis)
         setBackgroundColor(viewModel.backgroundColor)
         bind()
     }
@@ -43,7 +43,7 @@ class EmojiCollectionViewCell: UICollectionViewCell {
     private func bind() {
         guard let viewModel = viewModel else { return }
         
-        emojiesBinding = viewModel.observe(\.emojies,
+        emojiesBinding = viewModel.observe(\.emojis,
                                             options: [.new],
                                             changeHandler: { [weak self] _, change in
             guard let newValue = change.newValue else { return }

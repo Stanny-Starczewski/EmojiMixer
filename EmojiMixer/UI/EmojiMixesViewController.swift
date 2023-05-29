@@ -1,23 +1,24 @@
 import UIKit
 
-class ViewController: UIViewController {
+class EmojiMixesViewController: UIViewController {
+    
+    var viewModel: EmojiMixesViewModel?
+    private var emojiMixesBinding: NSObject?
     
     var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
-    lazy var emojiMixFactory = EmojiMixFactory()
-    lazy var emojiMixStore = EmojiMixStore()
-    
-    private var visibleEmojies: [EmojiMix] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationController()
         cofigueView()
         configueConstraints()
+        viewModel = EmojiMixesViewModel()
+        emojiMixesBinding = viewModel?.observe(\.emojiMixes, options: []) { [weak self] _, change in
+            guard let self = self else { return }
+            self.collectionView.reloadData()
+        }
         collectionView.register(EmojiCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
-        
-        emojiMixStore.delegate = self
-        visibleEmojies = emojiMixStore.emojiMixes
     }
     
     private func setupNavigationController() {
@@ -29,32 +30,11 @@ class ViewController: UIViewController {
 
     @objc
     private func addNewEmojiMix() {
-        let newMix = emojiMixFactory.makeNewMix()
-        try! emojiMixStore.addNewEmojiMix(newMix)
+        viewModel?.addEmojiMixTapped()
         }
     }
 
-extension ViewController: EmojiMixStoreDelegate {
-    func store(_ store: EmojiMixStore, didUpdate update: EmojiMixStoreUpdate) {
-        visibleEmojies = emojiMixStore.emojiMixes
-        collectionView.performBatchUpdates {
-            let insertedIndexPaths = update.insertedIndexes.map { IndexPath(item: $0, section: 0) }
-            let deletedIndexPaths = update.deletedIndexes.map { IndexPath(item: $0, section: 0) }
-            let updatedIndexPaths = update.updatedIndexes.map { IndexPath(item: $0, section: 0) }
-            collectionView.insertItems(at: insertedIndexPaths)
-            collectionView.insertItems(at: deletedIndexPaths)
-            collectionView.insertItems(at: updatedIndexPaths)
-            for move in update.movedIndexes {
-                collectionView.moveItem(
-                    at: IndexPath(item: move.oldIndex, section: 0),
-                    to: IndexPath(item: move.newIndex, section: 0)
-                )
-            }
-        }
-    }
-}
-
-extension ViewController {
+extension EmojiMixesViewController {
     func cofigueView() {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(collectionView)
@@ -75,31 +55,28 @@ extension ViewController {
         ])
     }
 }
+// MARK: - Extensions
 
-extension ViewController: UICollectionViewDataSource {
+extension EmojiMixesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return visibleEmojies.count
+        return viewModel?.emojiMixes.count ?? 0
     }
-    //количество ячеек в секции
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? EmojiCollectionViewCell
-        let emojiMix = visibleEmojies[indexPath.row]
-        cell?.titleLabel.text = emojiMix.emojies
-        cell?.contentView.backgroundColor = emojiMix.backgroundColor
-        return cell!
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? EmojiCollectionViewCell,
+        let viewModel = viewModel else { return UICollectionViewCell() }
+        cell.initialize(viewModel.emojiMixes[indexPath.item])
+        return cell
     }
-    //сама ячейка для заданной позиции IndexPath
 }
 
-extension ViewController: UICollectionViewDelegate {
+extension EmojiMixesViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     }
 }
 
-
-extension ViewController: UICollectionViewDelegateFlowLayout { // 1 Для управления расположением и размерами элементов (включая размеры хедера) нужно реализовать методы из протокола
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize { // 1 Мы добавляем реализацию метода
+extension EmojiMixesViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let insets = collectionView.contentInset
         let availableWidth = collectionView.bounds.width - insets.left - insets.right
         let minSpacing = 10.0
