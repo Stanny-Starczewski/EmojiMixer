@@ -3,11 +3,11 @@ import UIKit
 @objcMembers
 final class EmojiMixViewModel: NSObject {
     
-    dynamic private(set) var emojis: String
+    dynamic private(set) var emojies: String
     dynamic private(set) var backgroundColor: UIColor
     
-    init(emojis: String, backgroundColor: UIColor) {
-        self.emojis = emojis
+    init(emojies: String, backgroundColor: UIColor) {
+        self.emojies = emojies
         self.backgroundColor = backgroundColor
     }
 }
