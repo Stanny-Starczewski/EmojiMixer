@@ -22,16 +22,26 @@ class EmojiMixesViewController: UIViewController {
     }
     
     private func setupNavigationController() {
-             let rightButton = UIBarButtonItem(barButtonSystemItem: .add,
-                                               target: self,
-                                               action: #selector(addNewEmojiMix))
-             navigationItem.rightBarButtonItem = rightButton
-         }
+        let rightButton = UIBarButtonItem(barButtonSystemItem: .add,
+                                          target: self,
+                                          action: #selector(addNewEmojiMix))
+        navigationItem.rightBarButtonItem = rightButton
+        let leftButton = UIBarButtonItem(title: NSLocalizedString("Delete All", comment: ""),
+                                         style: .plain,
+                                         target: self,
+                                         action: #selector(deleteAll))
+        navigationItem.leftBarButtonItem = leftButton
+    }
 
     @objc
     private func addNewEmojiMix() {
         viewModel?.addEmojiMixTapped()
         }
+    
+    @objc
+    private func deleteAll() {
+        viewModel?.deleteAll()
+    }
     }
 
 extension EmojiMixesViewController {

@@ -46,6 +46,14 @@ final class EmojiMixStore: NSObject {
         try context.save()
     }
     
+    func deleteAll() throws {
+        let objects = fetchedResultsController.fetchedObjects ?? []
+        for object in objects {
+            context.delete(object)
+        }
+        try context.save()
+    }
+    
     func emojiMix(from emojiMixCorData: EmojiMixCoreData) throws -> EmojiMix {
         guard let emojies = emojiMixCorData.emojies else {
             throw EmojiMixStoreError.decodingErrorInvalidEmojies

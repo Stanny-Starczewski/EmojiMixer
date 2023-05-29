@@ -28,6 +28,10 @@ final class EmojiMixesViewModel: NSObject, Identifiable {
         try! emojiMixStore.addNewEmojiMix(newEmojiMix.emojies, color: newEmojiMix.backgroundColor)
     }
     
+    func deleteAll() {
+        try! emojiMixStore.deleteAll()
+    }
+    
     private func getEmojiMixesFromStore() -> [EmojiMixViewModel] {
         return emojiMixStore.emojiMixes.map {
             EmojiMixViewModel(
