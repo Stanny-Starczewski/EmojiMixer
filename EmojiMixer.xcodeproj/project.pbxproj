@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		291BC8D72A24327400B3D0E9 /* EmojiMixViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291BC8D62A24327400B3D0E9 /* EmojiMixViewModel.swift */; };
 		297E480F29FB6A78005C5985 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E480E29FB6A78005C5985 /* AppDelegate.swift */; };
 		297E481129FB6A78005C5985 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E481029FB6A78005C5985 /* SceneDelegate.swift */; };
-		297E481329FB6A78005C5985 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E481229FB6A78005C5985 /* ViewController.swift */; };
+		297E481329FB6A78005C5985 /* EmojiMixesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E481229FB6A78005C5985 /* EmojiMixesViewController.swift */; };
 		297E481829FB6A7A005C5985 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297E481729FB6A7A005C5985 /* Assets.xcassets */; };
 		297E481B29FB6A7A005C5985 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 297E481929FB6A7A005C5985 /* LaunchScreen.storyboard */; };
 		297E482329FB6D27005C5985 /* EmojiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E482229FB6D27005C5985 /* EmojiCollectionViewCell.swift */; };
@@ -21,10 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		291BC8D62A24327400B3D0E9 /* EmojiMixViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMixViewModel.swift; sourceTree = "<group>"; };
 		297E480B29FB6A78005C5985 /* EmojiMixer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiMixer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		297E480E29FB6A78005C5985 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		297E481029FB6A78005C5985 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		297E481229FB6A78005C5985 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		297E481229FB6A78005C5985 /* EmojiMixesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMixesViewController.swift; sourceTree = "<group>"; };
 		297E481729FB6A7A005C5985 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		297E481A29FB6A7A005C5985 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		297E481C29FB6A7A005C5985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,8 +92,9 @@
 		2990B79A2A187BDB00A443F2 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				297E481229FB6A78005C5985 /* ViewController.swift */,
+				297E481229FB6A78005C5985 /* EmojiMixesViewController.swift */,
 				297E482229FB6D27005C5985 /* EmojiCollectionViewCell.swift */,
+				291BC8D62A24327400B3D0E9 /* EmojiMixViewModel.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -184,7 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				297E481329FB6A78005C5985 /* ViewController.swift in Sources */,
+				297E481329FB6A78005C5985 /* EmojiMixesViewController.swift in Sources */,
 				297E480F29FB6A78005C5985 /* AppDelegate.swift in Sources */,
 				2990B78E2A180E7000A443F2 /* EmojiMixFactory.swift in Sources */,
 				29802BC42A172226001F3496 /* Model.xcdatamodeld in Sources */,
@@ -192,6 +195,7 @@
 				297E482329FB6D27005C5985 /* EmojiCollectionViewCell.swift in Sources */,
 				2990B7922A18184C00A443F2 /* EmojiMixStore.swift in Sources */,
 				2990B7942A181CAF00A443F2 /* UIColorMarshalling.swift in Sources */,
+				291BC8D72A24327400B3D0E9 /* EmojiMixViewModel.swift in Sources */,
 				2990B7902A180F8D00A443F2 /* EmojiMix.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
