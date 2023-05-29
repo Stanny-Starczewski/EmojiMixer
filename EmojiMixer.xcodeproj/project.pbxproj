@@ -51,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		291BC8DA2A25491200B3D0E9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				291BC8D82A243E1000B3D0E9 /* EmojiMixesViewModel.swift */,
+				291BC8D62A24327400B3D0E9 /* EmojiMixViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		297E480229FB6A78005C5985 = {
 			isa = PBXGroup;
 			children = (
@@ -70,8 +79,9 @@
 		297E480D29FB6A78005C5985 /* EmojiMixer */ = {
 			isa = PBXGroup;
 			children = (
-				2990B79A2A187BDB00A443F2 /* UI */,
-				2990B79B2A187C1900A443F2 /* Domain */,
+				2990B79A2A187BDB00A443F2 /* View */,
+				2990B79B2A187C1900A443F2 /* Model */,
+				291BC8DA2A25491200B3D0E9 /* ViewModel */,
 				2990B7992A187BD300A443F2 /* CoreData */,
 				2990B79C2A187C3F00A443F2 /* Helpers */,
 				297E480E29FB6A78005C5985 /* AppDelegate.swift */,
@@ -91,25 +101,23 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
-		2990B79A2A187BDB00A443F2 /* UI */ = {
+		2990B79A2A187BDB00A443F2 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				297E481229FB6A78005C5985 /* EmojiMixesViewController.swift */,
 				297E482229FB6D27005C5985 /* EmojiCollectionViewCell.swift */,
-				291BC8D62A24327400B3D0E9 /* EmojiMixViewModel.swift */,
-				291BC8D82A243E1000B3D0E9 /* EmojiMixesViewModel.swift */,
 			);
-			path = UI;
+			path = View;
 			sourceTree = "<group>";
 		};
-		2990B79B2A187C1900A443F2 /* Domain */ = {
+		2990B79B2A187C1900A443F2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				2990B78D2A180E7000A443F2 /* EmojiMixFactory.swift */,
 				2990B7912A18184C00A443F2 /* EmojiMixStore.swift */,
 				2990B78F2A180F8D00A443F2 /* EmojiMix.swift */,
 			);
-			path = Domain;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		2990B79C2A187C3F00A443F2 /* Helpers */ = {
