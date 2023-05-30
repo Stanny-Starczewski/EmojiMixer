@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		291BC8D72A24327400B3D0E9 /* EmojiMixViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291BC8D62A24327400B3D0E9 /* EmojiMixViewModel.swift */; };
 		291BC8D92A243E1000B3D0E9 /* EmojiMixesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291BC8D82A243E1000B3D0E9 /* EmojiMixesViewModel.swift */; };
+		291BC8DC2A25A3D000B3D0E9 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291BC8DB2A25A3D000B3D0E9 /* Observable.swift */; };
 		297E480F29FB6A78005C5985 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E480E29FB6A78005C5985 /* AppDelegate.swift */; };
 		297E481129FB6A78005C5985 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E481029FB6A78005C5985 /* SceneDelegate.swift */; };
 		297E481329FB6A78005C5985 /* EmojiMixesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297E481229FB6A78005C5985 /* EmojiMixesViewController.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		291BC8D62A24327400B3D0E9 /* EmojiMixViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMixViewModel.swift; sourceTree = "<group>"; };
 		291BC8D82A243E1000B3D0E9 /* EmojiMixesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMixesViewModel.swift; sourceTree = "<group>"; };
+		291BC8DB2A25A3D000B3D0E9 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		297E480B29FB6A78005C5985 /* EmojiMixer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiMixer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		297E480E29FB6A78005C5985 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		297E481029FB6A78005C5985 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				291BC8D82A243E1000B3D0E9 /* EmojiMixesViewModel.swift */,
 				291BC8D62A24327400B3D0E9 /* EmojiMixViewModel.swift */,
+				291BC8DB2A25A3D000B3D0E9 /* Observable.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				297E480F29FB6A78005C5985 /* AppDelegate.swift in Sources */,
 				291BC8D92A243E1000B3D0E9 /* EmojiMixesViewModel.swift in Sources */,
 				2990B78E2A180E7000A443F2 /* EmojiMixFactory.swift in Sources */,
+				291BC8DC2A25A3D000B3D0E9 /* Observable.swift in Sources */,
 				29802BC42A172226001F3496 /* Model.xcdatamodeld in Sources */,
 				297E481129FB6A78005C5985 /* SceneDelegate.swift in Sources */,
 				297E482329FB6D27005C5985 /* EmojiCollectionViewCell.swift in Sources */,

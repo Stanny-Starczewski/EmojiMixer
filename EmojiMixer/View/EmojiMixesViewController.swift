@@ -12,7 +12,10 @@ class EmojiMixesViewController: UIViewController {
         cofigueView()
         configueConstraints()
         viewModel = EmojiMixesViewModel()
-        viewModel?.onChange = collectionView.reloadData
+        viewModel?.$emojiMixes.bind { [weak self] _ in
+            guard let self = self else { return }
+            self.collectionView.reloadData()
+        }
         collectionView.register(EmojiCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
     }

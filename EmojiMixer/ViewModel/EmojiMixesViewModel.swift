@@ -1,12 +1,8 @@
 import UIKit
 
 final class EmojiMixesViewModel {
-    var onChange: (() -> Void)?
-     private(set) var emojiMixes: [EmojiMixViewModel] = [] {
-         didSet {
-             onChange?()
-         }
-     }
+    @Observable
+    private(set) var emojiMixes: [EmojiMixViewModel] = []
     
     private let emojiMixFactory: EmojiMixFactory
     private let emojiMixStore: EmojiMixStore

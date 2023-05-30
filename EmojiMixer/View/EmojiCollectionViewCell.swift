@@ -38,10 +38,12 @@ class EmojiCollectionViewCell: UICollectionViewCell {
     }
     
     private func bind() {
-        guard var viewModel = viewModel else { return }
-        viewModel.onChange = { [weak self] in
-            self?.setTitleLabel(text: viewModel.emojis)
-            self?.setBackgroundColor(viewModel.backgroundColor)
+        guard let viewModel = viewModel else { return }
+        viewModel.$emojis.bind { [weak self] newValue in
+            self?.setTitleLabel(text: newValue)
+        }
+        viewModel.$backgroundColor.bind { [weak self] newValue in
+            self?.setBackgroundColor(newValue)
         }
     }
     

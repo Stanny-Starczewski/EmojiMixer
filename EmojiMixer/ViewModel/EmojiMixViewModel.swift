@@ -3,17 +3,9 @@ import UIKit
 struct EmojiMixViewModel: Identifiable {
     let id: String
     
-    var onChange: (() -> Void)?
+    @Observable
+    private(set) var emojis: String
     
-    private(set) var emojis: String {
-        didSet {
-            onChange?()
-        }
-    }
-    
-    private(set) var backgroundColor: UIColor {
-        didSet {
-            onChange?()
-        }
-    }
+    @Observable
+    private(set) var backgroundColor: UIColor
 }
