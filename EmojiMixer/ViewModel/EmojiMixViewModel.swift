@@ -1,15 +1,21 @@
 import UIKit
 
-@objcMembers
-final class EmojiMixViewModel: NSObject, Identifiable {
+struct EmojiMixViewModel: Identifiable {
     let id: String
-    dynamic private(set) var emojis: String
-    dynamic private(set) var backgroundColor: UIColor
+//    let emojis: String
+//    let backgroundColor: UIColor
     
-    init(id: String, emojis: String, backgroundColor: UIColor) {
-        self.id = id
-        self.emojis = emojis
-        self.backgroundColor = backgroundColor
-        super.init()
+    var onChange: (() -> Void)?
+    
+    private(set) var emojis: String {
+        didSet {
+            onChange?()
+        }
+    }
+    
+    private(set) var backgroundColor: UIColor {
+        didSet {
+            onChange?()
+        }
     }
 }

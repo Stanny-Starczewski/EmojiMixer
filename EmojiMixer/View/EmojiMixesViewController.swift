@@ -2,10 +2,10 @@ import UIKit
 
 class EmojiMixesViewController: UIViewController {
     
-    var viewModel: EmojiMixesViewModel?
-    private var emojiMixesBinding: NSObject?
+    private var viewModel: EmojiMixesViewModel?
+//    private var emojiMixesBinding: NSObject?
     
-    var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    private var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -13,10 +13,11 @@ class EmojiMixesViewController: UIViewController {
         cofigueView()
         configueConstraints()
         viewModel = EmojiMixesViewModel()
-        emojiMixesBinding = viewModel?.observe(\.emojiMixes, options: []) { [weak self] _, change in
-            guard let self = self else { return }
-            self.collectionView.reloadData()
-        }
+//        emojiMixesBinding = viewModel?.observe(\.emojiMixes, options: []) { [weak self] _, change in
+//            guard let self = self else { return }
+//            self.collectionView.reloadData()
+//        }
+        viewModel?.onChange = collectionView.reloadData
         collectionView.register(EmojiCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
     }

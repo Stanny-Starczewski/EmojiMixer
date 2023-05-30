@@ -3,10 +3,15 @@ import UIKit
 class EmojiCollectionViewCell: UICollectionViewCell {
     let titleLabel: UILabel = UILabel()
     
-     var viewModel: EmojiMixViewModel?
+     var viewModel: EmojiMixViewModel? {
+         didSet {
+             titleLabel.text = viewModel?.emojis
+             contentView.backgroundColor = viewModel?.backgroundColor
+         }
+     }
     
-    private var emojiesBinding: NSObject?
-    private var backgroundColorBinding: NSObject?
+//    private var emojiesBinding: NSObject?
+//    private var backgroundColorBinding: NSObject?
     
     override init(frame: CGRect) {
         super .init(frame: frame)
@@ -28,10 +33,10 @@ class EmojiCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func prepareForReuse() {
-        emojiesBinding = nil
-        backgroundColorBinding = nil
-    }
+//    override func prepareForReuse() {
+//        emojiesBinding = nil
+//        backgroundColorBinding = nil
+//    }
     
     func initialize(_ viewModel: EmojiMixViewModel) {
         self.viewModel = viewModel
@@ -41,21 +46,25 @@ class EmojiCollectionViewCell: UICollectionViewCell {
     }
     
     private func bind() {
-        guard let viewModel = viewModel else { return }
+        guard var viewModel = viewModel else { return }
         
-        emojiesBinding = viewModel.observe(\.emojis,
-                                            options: [.new],
-                                            changeHandler: { [weak self] _, change in
-            guard let newValue = change.newValue else { return }
-            self?.setTitleLabel(text: newValue)
-        })
-        
-        backgroundColorBinding = viewModel.observe(\.backgroundColor,
-                                                    options: [.new],
-                                                    changeHandler: { [weak self] _, change in
-            guard let newValue = change.newValue else { return }
-            self?.setBackgroundColor(newValue)
-        })
+//        emojiesBinding = viewModel.observe(\.emojis,
+//                                            options: [.new],
+//                                            changeHandler: { [weak self] _, change in
+//            guard let newValue = change.newValue else { return }
+//            self?.setTitleLabel(text: newValue)
+//        })
+//
+//        backgroundColorBinding = viewModel.observe(\.backgroundColor,
+//                                                    options: [.new],
+//                                                    changeHandler: { [weak self] _, change in
+//            guard let newValue = change.newValue else { return }
+//            self?.setBackgroundColor(newValue)
+//        })
+        viewModel.onChange = { [weak self] in
+            self?.setTitleLabel(text: viewModel.emojis)
+            self?.setBackgroundColor(viewModel.backgroundColor)
+        }
     }
     
     private func setTitleLabel(text: String?) {

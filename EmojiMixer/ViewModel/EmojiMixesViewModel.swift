@@ -1,14 +1,17 @@
 import UIKit
 
-@objcMembers
-final class EmojiMixesViewModel: NSObject, Identifiable {
-    
-    dynamic private(set) var emojiMixes: [EmojiMixViewModel] = []
+final class EmojiMixesViewModel {
+    var onChange: (() -> Void)?
+     private(set) var emojiMixes: [EmojiMixViewModel] = [] {
+         didSet {
+             onChange?() // сообщаем через замыкание, что ViewModel изменилась
+         }
+     }
     
     private let emojiMixFactory: EmojiMixFactory
     private let emojiMixStore: EmojiMixStore
 
-    override convenience init() {
+    convenience init() {
         let emojiMixStore = try! EmojiMixStore(
             context: (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         )
@@ -18,7 +21,7 @@ final class EmojiMixesViewModel: NSObject, Identifiable {
     init(emojiMixFactory: EmojiMixFactory, emojiMixStore: EmojiMixStore) {
         self.emojiMixFactory = emojiMixFactory
         self.emojiMixStore = emojiMixStore
-        super.init()
+//        super.init()
         emojiMixStore.delegate = self
         emojiMixes = getEmojiMixesFromStore()
     }
