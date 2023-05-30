@@ -2,8 +2,6 @@ import UIKit
 
 struct EmojiMixViewModel: Identifiable {
     let id: String
-//    let emojis: String
-//    let backgroundColor: UIColor
     
     var onChange: (() -> Void)?
     

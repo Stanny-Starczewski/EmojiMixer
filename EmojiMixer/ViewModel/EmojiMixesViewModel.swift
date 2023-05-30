@@ -4,7 +4,7 @@ final class EmojiMixesViewModel {
     var onChange: (() -> Void)?
      private(set) var emojiMixes: [EmojiMixViewModel] = [] {
          didSet {
-             onChange?() // сообщаем через замыкание, что ViewModel изменилась
+             onChange?()
          }
      }
     
@@ -21,7 +21,6 @@ final class EmojiMixesViewModel {
     init(emojiMixFactory: EmojiMixFactory, emojiMixStore: EmojiMixStore) {
         self.emojiMixFactory = emojiMixFactory
         self.emojiMixStore = emojiMixStore
-//        super.init()
         emojiMixStore.delegate = self
         emojiMixes = getEmojiMixesFromStore()
     }

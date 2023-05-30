@@ -3,7 +3,6 @@ import UIKit
 class EmojiMixesViewController: UIViewController {
     
     private var viewModel: EmojiMixesViewModel?
-//    private var emojiMixesBinding: NSObject?
     
     private var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
 
@@ -13,10 +12,6 @@ class EmojiMixesViewController: UIViewController {
         cofigueView()
         configueConstraints()
         viewModel = EmojiMixesViewModel()
-//        emojiMixesBinding = viewModel?.observe(\.emojiMixes, options: []) { [weak self] _, change in
-//            guard let self = self else { return }
-//            self.collectionView.reloadData()
-//        }
         viewModel?.onChange = collectionView.reloadData
         collectionView.register(EmojiCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
