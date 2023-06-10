@@ -1,7 +1,5 @@
-/* 
-  Localizable.strings
-  EmojiMixer
 
-  Created by Gennadii Kulikov on 09.06.2023.
-  
-*/
+"emptyState.title" = "Что будем отслеживать?";
+"delete" = "Удалить";
+"delete.confirmation" = "Уверены что хотите удалить трекер?";
+"cancel" = "Отменить";
