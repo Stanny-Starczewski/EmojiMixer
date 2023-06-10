@@ -25,7 +25,7 @@ class EmojiMixesViewController: UIViewController {
                                           target: self,
                                           action: #selector(addNewEmojiMix))
         navigationItem.rightBarButtonItem = rightButton
-        let leftButton = UIBarButtonItem(title: NSLocalizedString("Delete All", comment: ""),
+        let leftButton = UIBarButtonItem(title: NSLocalizedString("delete", comment: "Text displayed on Delete"),
                                          style: .plain,
                                          target: self,
                                          action: #selector(deleteAll))
