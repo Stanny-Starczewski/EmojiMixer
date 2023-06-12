@@ -22,6 +22,7 @@
 		2990B7922A18184C00A443F2 /* EmojiMixStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2990B7912A18184C00A443F2 /* EmojiMixStore.swift */; };
 		2990B7942A181CAF00A443F2 /* UIColorMarshalling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2990B7932A181CAF00A443F2 /* UIColorMarshalling.swift */; };
 		299345A32A3419700046A065 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 299345A52A3419700046A065 /* Localizable.strings */; };
+		29D392332A37A81F00DF8E04 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29D392352A37A81F00DF8E04 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,10 @@
 		299345A62A3419720046A065 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		299345A72A3419730046A065 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		299345A92A3419740046A065 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		29D392342A37A81F00DF8E04 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		29D392362A37A82600DF8E04 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		29D392372A37A84D00DF8E04 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		29D392392A37A85600DF8E04 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				299345A52A3419700046A065 /* Localizable.strings */,
+				29D392352A37A81F00DF8E04 /* InfoPlist.strings */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -214,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				297E481B29FB6A7A005C5985 /* LaunchScreen.storyboard in Resources */,
+				29D392332A37A81F00DF8E04 /* InfoPlist.strings in Resources */,
 				299345A32A3419700046A065 /* Localizable.strings in Resources */,
 				297E481829FB6A7A005C5985 /* Assets.xcassets in Resources */,
 			);
@@ -266,6 +273,17 @@
 				299345A92A3419740046A065 /* ru */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		29D392352A37A81F00DF8E04 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29D392342A37A81F00DF8E04 /* en */,
+				29D392362A37A82600DF8E04 /* ar */,
+				29D392372A37A84D00DF8E04 /* de */,
+				29D392392A37A85600DF8E04 /* ru */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
