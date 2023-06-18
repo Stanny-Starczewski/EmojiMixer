@@ -26,6 +26,11 @@ final class EmojiMixesViewModel {
         try! emojiMixStore.addNewEmojiMix(newEmojiMix.emojies, color: newEmojiMix.backgroundColor)
     }
     
+    func addFixedEmojiMix() {
+        let newMix = emojiMixFactory.makeNewFixedMix()
+        try! emojiMixStore.addNewEmojiMix(newMix.emojies, color: newMix.backgroundColor)
+    }
+    
     func deleteAll() {
         try! emojiMixStore.deleteAll()
     }

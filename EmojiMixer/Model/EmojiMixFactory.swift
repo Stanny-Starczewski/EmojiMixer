@@ -33,4 +33,12 @@ final class EmojiMixFactory {
             backgroundColor: makeColor(emojies)
         )
     }
+    
+    func makeNewFixedMix() -> EmojiMix {
+        let emojies = (emojies[0], emojies[1], emojies[3])
+        return EmojiMix(
+            emojies: "\(emojies.0)\(emojies.1)\(emojies.2)",
+            backgroundColor: makeColor(emojies)
+        )
+    }
 }

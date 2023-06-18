@@ -22,8 +22,20 @@
 		2990B7922A18184C00A443F2 /* EmojiMixStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2990B7912A18184C00A443F2 /* EmojiMixStore.swift */; };
 		2990B7942A181CAF00A443F2 /* UIColorMarshalling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2990B7932A181CAF00A443F2 /* UIColorMarshalling.swift */; };
 		299345A32A3419700046A065 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 299345A52A3419700046A065 /* Localizable.strings */; };
+		29A472AC2A3EC6DE00455625 /* EmojiMixerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A472AB2A3EC6DE00455625 /* EmojiMixerTests.swift */; };
+		29A472B42A3EC73700455625 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 29A472B32A3EC73700455625 /* SnapshotTesting */; };
 		29D392332A37A81F00DF8E04 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29D392352A37A81F00DF8E04 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		29A472AD2A3EC6DE00455625 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 297E480329FB6A78005C5985 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 297E480A29FB6A78005C5985;
+			remoteInfo = EmojiMixer;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		291BC8D62A24327400B3D0E9 /* EmojiMixViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMixViewModel.swift; sourceTree = "<group>"; };
@@ -51,6 +63,8 @@
 		299345A62A3419720046A065 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		299345A72A3419730046A065 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		299345A92A3419740046A065 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		29A472A92A3EC6DD00455625 /* EmojiMixerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmojiMixerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		29A472AB2A3EC6DE00455625 /* EmojiMixerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMixerTests.swift; sourceTree = "<group>"; };
 		29D392342A37A81F00DF8E04 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		29D392362A37A82600DF8E04 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		29D392372A37A84D00DF8E04 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -62,6 +76,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29A472A62A3EC6DD00455625 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29A472B42A3EC73700455625 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				297E480D29FB6A78005C5985 /* EmojiMixer */,
+				29A472AA2A3EC6DE00455625 /* EmojiMixerTests */,
 				297E480C29FB6A78005C5985 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				297E480B29FB6A78005C5985 /* EmojiMixer.app */,
+				29A472A92A3EC6DD00455625 /* EmojiMixerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,6 +180,14 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		29A472AA2A3EC6DE00455625 /* EmojiMixerTests */ = {
+			isa = PBXGroup;
+			children = (
+				29A472AB2A3EC6DE00455625 /* EmojiMixerTests.swift */,
+			);
+			path = EmojiMixerTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -176,6 +208,27 @@
 			productReference = 297E480B29FB6A78005C5985 /* EmojiMixer.app */;
 			productType = "com.apple.product-type.application";
 		};
+		29A472A82A3EC6DD00455625 /* EmojiMixerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29A472B12A3EC6DE00455625 /* Build configuration list for PBXNativeTarget "EmojiMixerTests" */;
+			buildPhases = (
+				29A472A52A3EC6DD00455625 /* Sources */,
+				29A472A62A3EC6DD00455625 /* Frameworks */,
+				29A472A72A3EC6DD00455625 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29A472AE2A3EC6DE00455625 /* PBXTargetDependency */,
+			);
+			name = EmojiMixerTests;
+			packageProductDependencies = (
+				29A472B32A3EC73700455625 /* SnapshotTesting */,
+			);
+			productName = EmojiMixerTests;
+			productReference = 29A472A92A3EC6DD00455625 /* EmojiMixerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -188,6 +241,10 @@
 				TargetAttributes = {
 					297E480A29FB6A78005C5985 = {
 						CreatedOnToolsVersion = 14.3;
+					};
+					29A472A82A3EC6DD00455625 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 297E480A29FB6A78005C5985;
 					};
 				};
 			};
@@ -205,11 +262,15 @@
 				pl,
 			);
 			mainGroup = 297E480229FB6A78005C5985;
+			packageReferences = (
+				29A472B22A3EC73700455625 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = 297E480C29FB6A78005C5985 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				297E480A29FB6A78005C5985 /* EmojiMixer */,
+				29A472A82A3EC6DD00455625 /* EmojiMixerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +284,13 @@
 				29D392332A37A81F00DF8E04 /* InfoPlist.strings in Resources */,
 				299345A32A3419700046A065 /* Localizable.strings in Resources */,
 				297E481829FB6A7A005C5985 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29A472A72A3EC6DD00455625 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +316,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		29A472A52A3EC6DD00455625 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29A472AC2A3EC6DE00455625 /* EmojiMixerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		29A472AE2A3EC6DE00455625 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 297E480A29FB6A78005C5985 /* EmojiMixer */;
+			targetProxy = 29A472AD2A3EC6DE00455625 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		297E481929FB6A7A005C5985 /* LaunchScreen.storyboard */ = {
@@ -465,6 +549,42 @@
 			};
 			name = Release;
 		};
+		29A472AF2A3EC6DE00455625 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A8593NVZ3H;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.yandex.practicum.EmojiMixerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmojiMixer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EmojiMixer";
+			};
+			name = Debug;
+		};
+		29A472B02A3EC6DE00455625 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A8593NVZ3H;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.yandex.practicum.EmojiMixerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmojiMixer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EmojiMixer";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -486,7 +606,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		29A472B12A3EC6DE00455625 /* Build configuration list for PBXNativeTarget "EmojiMixerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29A472AF2A3EC6DE00455625 /* Debug */,
+				29A472B02A3EC6DE00455625 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		29A472B22A3EC73700455625 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		29A472B32A3EC73700455625 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29A472B22A3EC73700455625 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		29802BC22A172226001F3496 /* Model.xcdatamodeld */ = {
