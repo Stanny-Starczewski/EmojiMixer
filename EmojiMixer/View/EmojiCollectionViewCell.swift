@@ -2,6 +2,7 @@ import UIKit
 
 class EmojiCollectionViewCell: UICollectionViewCell {
     let titleLabel: UILabel = UILabel()
+    private let colors = Colors()
     
      var viewModel: EmojiMixViewModel? {
          didSet {
@@ -52,6 +53,6 @@ class EmojiCollectionViewCell: UICollectionViewCell {
     }
     
     private func setBackgroundColor(_ backgroundColor: UIColor?) {
-        contentView.backgroundColor = backgroundColor
+        contentView.backgroundColor = colors.tintEmojiBackgroundColor(backgroundColor!)
     }
 }

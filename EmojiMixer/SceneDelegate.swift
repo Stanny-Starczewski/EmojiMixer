@@ -1,6 +1,7 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    private let colors = Colors()
 
     var window: UIWindow?
 
@@ -9,6 +10,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: scene)
         let viewController = EmojiMixesViewController()
         let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.navigationBar.tintColor = colors.navigationBarTintColor
         window.rootViewController = navigationController
         self.window = window
         window.makeKeyAndVisible()

@@ -3,6 +3,7 @@ import UIKit
 class EmojiMixesViewController: UIViewController {
     
     private var viewModel: EmojiMixesViewModel?
+    private let colors = Colors()
     
     private var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
 
@@ -52,6 +53,7 @@ extension EmojiMixesViewController {
         collectionView.delegate = self
         
         collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        collectionView.backgroundColor = colors.collectionViewBackgroundColor
     }
 
     func configueConstraints() {

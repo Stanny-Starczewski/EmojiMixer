@@ -1,10 +1,3 @@
-//
-//  EmojiMixerTests.swift
-//  EmojiMixerTests
-//
-//  Created by Gennadii Kulikov on 18.06.2023.
-//
-
 import XCTest
 import SnapshotTesting
 @testable import EmojiMixer
