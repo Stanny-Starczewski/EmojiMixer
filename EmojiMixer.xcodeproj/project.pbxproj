@@ -26,6 +26,8 @@
 		29A472B42A3EC73700455625 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 29A472B32A3EC73700455625 /* SnapshotTesting */; };
 		29A472B82A3EEB1000455625 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A472B72A3EEB1000455625 /* Colors.swift */; };
 		29D392332A37A81F00DF8E04 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29D392352A37A81F00DF8E04 /* InfoPlist.strings */; };
+		4C781B0297D77926A2E60FE3 /* Pods_EmojiMixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3A6A871E99A6511FCB909C6 /* Pods_EmojiMixer.framework */; };
+		FE963ECEED55EB1709F0B03A /* Pods_EmojiMixerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CC75BC6B08BB25E48D21AA0 /* Pods_EmojiMixerTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CB4D3E2AF1760AFCF7926A8 /* Pods-EmojiMixerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmojiMixerTests.release.xcconfig"; path = "Target Support Files/Pods-EmojiMixerTests/Pods-EmojiMixerTests.release.xcconfig"; sourceTree = "<group>"; };
 		291BC8D62A24327400B3D0E9 /* EmojiMixViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMixViewModel.swift; sourceTree = "<group>"; };
 		291BC8D82A243E1000B3D0E9 /* EmojiMixesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMixesViewModel.swift; sourceTree = "<group>"; };
 		291BC8DB2A25A3D000B3D0E9 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
@@ -71,6 +74,11 @@
 		29D392362A37A82600DF8E04 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		29D392372A37A84D00DF8E04 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		29D392392A37A85600DF8E04 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2CC75BC6B08BB25E48D21AA0 /* Pods_EmojiMixerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmojiMixerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3352578B3229DB84682AF2F7 /* Pods-EmojiMixer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmojiMixer.release.xcconfig"; path = "Target Support Files/Pods-EmojiMixer/Pods-EmojiMixer.release.xcconfig"; sourceTree = "<group>"; };
+		71378669E314719A2643BEC3 /* Pods-EmojiMixer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmojiMixer.debug.xcconfig"; path = "Target Support Files/Pods-EmojiMixer/Pods-EmojiMixer.debug.xcconfig"; sourceTree = "<group>"; };
+		973D6A8AAE22AF2DFFE21F33 /* Pods-EmojiMixerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmojiMixerTests.debug.xcconfig"; path = "Target Support Files/Pods-EmojiMixerTests/Pods-EmojiMixerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B3A6A871E99A6511FCB909C6 /* Pods_EmojiMixer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmojiMixer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C781B0297D77926A2E60FE3 /* Pods_EmojiMixer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +95,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29A472B42A3EC73700455625 /* SnapshotTesting in Frameworks */,
+				FE963ECEED55EB1709F0B03A /* Pods_EmojiMixerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +118,8 @@
 				297E480D29FB6A78005C5985 /* EmojiMixer */,
 				29A472AA2A3EC6DE00455625 /* EmojiMixerTests */,
 				297E480C29FB6A78005C5985 /* Products */,
+				849015EB8AA90EF6FAED2773 /* Pods */,
+				47C071EB297472047140487B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -191,6 +203,27 @@
 			path = EmojiMixerTests;
 			sourceTree = "<group>";
 		};
+		47C071EB297472047140487B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3A6A871E99A6511FCB909C6 /* Pods_EmojiMixer.framework */,
+				2CC75BC6B08BB25E48D21AA0 /* Pods_EmojiMixerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		849015EB8AA90EF6FAED2773 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				71378669E314719A2643BEC3 /* Pods-EmojiMixer.debug.xcconfig */,
+				3352578B3229DB84682AF2F7 /* Pods-EmojiMixer.release.xcconfig */,
+				973D6A8AAE22AF2DFFE21F33 /* Pods-EmojiMixerTests.debug.xcconfig */,
+				0CB4D3E2AF1760AFCF7926A8 /* Pods-EmojiMixerTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -198,6 +231,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 297E481F29FB6A7A005C5985 /* Build configuration list for PBXNativeTarget "EmojiMixer" */;
 			buildPhases = (
+				26980B0B3D63A4DE1DBF02B0 /* [CP] Check Pods Manifest.lock */,
 				297E480729FB6A78005C5985 /* Sources */,
 				297E480829FB6A78005C5985 /* Frameworks */,
 				297E480929FB6A78005C5985 /* Resources */,
@@ -215,9 +249,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29A472B12A3EC6DE00455625 /* Build configuration list for PBXNativeTarget "EmojiMixerTests" */;
 			buildPhases = (
+				DDC39698259D422795EC2D29 /* [CP] Check Pods Manifest.lock */,
 				29A472A52A3EC6DD00455625 /* Sources */,
 				29A472A62A3EC6DD00455625 /* Frameworks */,
 				29A472A72A3EC6DD00455625 /* Resources */,
+				6688ED9F1A52CB4FA1BF7736 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -298,6 +334,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26980B0B3D63A4DE1DBF02B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EmojiMixer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6688ED9F1A52CB4FA1BF7736 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EmojiMixerTests/Pods-EmojiMixerTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EmojiMixerTests/Pods-EmojiMixerTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EmojiMixerTests/Pods-EmojiMixerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDC39698259D422795EC2D29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EmojiMixerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		297E480729FB6A78005C5985 /* Sources */ = {
@@ -495,6 +595,7 @@
 		};
 		297E482029FB6A7A005C5985 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71378669E314719A2643BEC3 /* Pods-EmojiMixer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -525,6 +626,7 @@
 		};
 		297E482129FB6A7A005C5985 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3352578B3229DB84682AF2F7 /* Pods-EmojiMixer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -555,6 +657,7 @@
 		};
 		29A472AF2A3EC6DE00455625 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 973D6A8AAE22AF2DFFE21F33 /* Pods-EmojiMixerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -573,6 +676,7 @@
 		};
 		29A472B02A3EC6DE00455625 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CB4D3E2AF1760AFCF7926A8 /* Pods-EmojiMixerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
