@@ -26,6 +26,7 @@
 		29A472B42A3EC73700455625 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 29A472B32A3EC73700455625 /* SnapshotTesting */; };
 		29A472B82A3EEB1000455625 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A472B72A3EEB1000455625 /* Colors.swift */; };
 		29D392332A37A81F00DF8E04 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29D392352A37A81F00DF8E04 /* InfoPlist.strings */; };
+		29D5514F2A40121E0021A617 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D5514E2A40121D0021A617 /* AnalyticsService.swift */; };
 		4C781B0297D77926A2E60FE3 /* Pods_EmojiMixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3A6A871E99A6511FCB909C6 /* Pods_EmojiMixer.framework */; };
 		FE963ECEED55EB1709F0B03A /* Pods_EmojiMixerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CC75BC6B08BB25E48D21AA0 /* Pods_EmojiMixerTests.framework */; };
 /* End PBXBuildFile section */
@@ -74,6 +75,7 @@
 		29D392362A37A82600DF8E04 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		29D392372A37A84D00DF8E04 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		29D392392A37A85600DF8E04 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		29D5514E2A40121D0021A617 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
 		2CC75BC6B08BB25E48D21AA0 /* Pods_EmojiMixerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmojiMixerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3352578B3229DB84682AF2F7 /* Pods-EmojiMixer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmojiMixer.release.xcconfig"; path = "Target Support Files/Pods-EmojiMixer/Pods-EmojiMixer.release.xcconfig"; sourceTree = "<group>"; };
 		71378669E314719A2643BEC3 /* Pods-EmojiMixer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmojiMixer.debug.xcconfig"; path = "Target Support Files/Pods-EmojiMixer/Pods-EmojiMixer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				2990B78D2A180E7000A443F2 /* EmojiMixFactory.swift */,
 				2990B7912A18184C00A443F2 /* EmojiMixStore.swift */,
 				2990B78F2A180F8D00A443F2 /* EmojiMix.swift */,
+				29D5514E2A40121D0021A617 /* AnalyticsService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -220,7 +223,6 @@
 				973D6A8AAE22AF2DFFE21F33 /* Pods-EmojiMixerTests.debug.xcconfig */,
 				0CB4D3E2AF1760AFCF7926A8 /* Pods-EmojiMixerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -416,6 +418,7 @@
 				2990B7922A18184C00A443F2 /* EmojiMixStore.swift in Sources */,
 				2990B7942A181CAF00A443F2 /* UIColorMarshalling.swift in Sources */,
 				291BC8D72A24327400B3D0E9 /* EmojiMixViewModel.swift in Sources */,
+				29D5514F2A40121E0021A617 /* AnalyticsService.swift in Sources */,
 				2990B7902A180F8D00A443F2 /* EmojiMix.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

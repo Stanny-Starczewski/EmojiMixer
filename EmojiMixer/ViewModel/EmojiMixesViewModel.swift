@@ -6,6 +6,7 @@ final class EmojiMixesViewModel {
     
     private let emojiMixFactory: EmojiMixFactory
     private let emojiMixStore: EmojiMixStore
+    private let analyticsService = AnalyticsService()
 
     convenience init() {
         let emojiMixStore = try! EmojiMixStore(
@@ -22,6 +23,7 @@ final class EmojiMixesViewModel {
     }
     
     func addEmojiMixTapped() {
+        analyticsService.report(event: "mixes_add", params: ["mixes_count" : emojiMixes.count + 1])
         let newEmojiMix = emojiMixFactory.makeNewMix()
         try! emojiMixStore.addNewEmojiMix(newEmojiMix.emojies, color: newEmojiMix.backgroundColor)
     }
@@ -32,6 +34,7 @@ final class EmojiMixesViewModel {
     }
     
     func deleteAll() {
+        analyticsService.report(event: "mixes_delete_all", params: ["mixes_count" : emojiMixes.count])
         try! emojiMixStore.deleteAll()
     }
     
