@@ -1,2 +1,2 @@
 # EmojiMixer
-приложение, которое демонстрирует основные возможности UICollectionView.
+an application that demonstrates the basic capabilities of UICollectionView.
